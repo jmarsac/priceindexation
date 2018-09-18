@@ -1,0 +1,47 @@
+# Copyright (C) 2018 jmarsac <jmarsac@azimut.fr>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+#
+# Generic
+#
+
+# Module label 'Module132000Name'
+Module132000Name = Price Indexation
+# Module description 'Module132000Desc'
+Module132000Desc = Calculate the indexed price of a product line in Propal/Bill from initial price, initial index and current index in extrafields.
+
+#
+# Admin page
+#
+PriceIndexationSetup = Price Indexation setup
+Settings = Settings
+PriceIndexationSetupPage = Price Indexation setup page
+
+#
+# About page
+#
+About = About
+PriceIndexationAbout = About Price Indexation module
+PriceIndexationAboutPage = Price Indexation about page
+
+Initial_UP = P0
+Initial_index = I0
+Current_index = I
+
+#
+# PDF document model
+#
+PDFAzurPriceIndexationDescription = Proposal model with indexed prices from Azur model
+PDFCrabePriceIndexationDescription = Invoice model with indexed prices from Crabe model

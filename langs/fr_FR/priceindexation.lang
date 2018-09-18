@@ -1,0 +1,47 @@
+# Copyright (C) 2018 jmarsac <jmarsac@azimut.fr>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+CHARSET=UTF-8
+#
+# Générique
+#
+
+# Module label 'Module132000Name'
+Module132000Name = Indexation de prix
+# Module description 'Module132000Desc'
+Module132000Desc = Calcul du prix actualisé d'une ligne de produit/service à partir du prix initial, de l'index initial et de l'index actuel en extrafields
+
+#
+# Page d'administration
+#
+PriceIndexationSetup = Configuration du module Indexation de prix
+Settings = Réglages
+PriceIndexationSetupPage = Page de réglage du module Indexation de prix
+
+#
+# Page À propos
+#
+About = À propos
+PriceIndexationAbout = À propos de Indexation de prix
+PriceIndexationAboutPage = Page à propos de Indexation de prix
+
+Initial_UP = P0
+Initial_index = S0
+Current_index = S
+
+#
+# Modèle de document PDF
+#
+PDFAzurPriceIndexationDescription = Modèle de proposition avec prix indexés dérivé du modèle Azur
+PDFCrabePriceIndexationDescription = Modèle de facture avec prix indexés dérivé du modèle Crabe
