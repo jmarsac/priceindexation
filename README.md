@@ -22,7 +22,7 @@ This module need 3 extrafields by Propal/Bill line :
 
 Two PDF models are provided for :
 -  proposals (*azur priceindexation*) and,
--  invoices (*crabe indexation*)
+-  invoices (*crabe priceindexation*)
 
 
 ### Translations
