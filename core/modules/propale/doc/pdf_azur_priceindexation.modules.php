@@ -80,7 +80,7 @@ class pdf_azur_priceindexation extends ModelePDFPropales
 
 		$this->db = $db;
 		$this->name = "azur priceindexation";
-		$this->description = $langs->trans('DocModelPriceIndexationDescription');
+		$this->description = $langs->trans('PDFAzurPriceIndexationDescription');
 		$this->update_main_doc_field = 1;		// Save the name of generated file as the main doc when generating a doc with this template
 
 		// Dimension page

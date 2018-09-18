@@ -41,7 +41,7 @@ Initial_index = I0
 Current_index = I
 
 #
-# PDF document model
+# PDF document template
 #
-PDFAzurPriceIndexationDescription = Proposal model with indexed prices from Azur model
-PDFCrabePriceIndexationDescription = Invoice model with indexed prices from Crabe model
+PDFAzurPriceIndexationDescription = Proposal template with indexed prices from Azur template
+PDFCrabePriceIndexationDescription = Invoice template with indexed prices from Crabe template
