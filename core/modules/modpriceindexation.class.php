@@ -111,7 +111,7 @@ class modpriceindexation extends DolibarrModules
 		$this->depends = array();		// List of module class names as string that must be enabled if this module is enabled
 		$this->requiredby = array();	// List of module ids to disable if this one is disabled
 		$this->conflictwith = array();	// List of module class names as string this module is in conflict with
-		$this->phpmin = array(7,0);					// Minimum version of PHP required by module
+		$this->phpmin = array(5,6);					// Minimum version of PHP required by module
 		$this->need_dolibarr_version = array(8,0);	// Minimum version of Dolibarr required by module
 		$this->langfiles = array("priceindexation@priceindexation");
 		$this->warnings_activation = array();                     // Warning to show when we activate module. array('always'='text') or array('FR'='textfr','ES'='textes'...)
@@ -327,17 +327,17 @@ class modpriceindexation extends DolibarrModules
 		include_once DOL_DOCUMENT_ROOT.'/core/class/extrafields.class.php';
 		$extrafields = new ExtraFields($this->db);
 
-		$result1=$extrafields->addExtraField('price0', "Initial_UP", 'price', 100,  '', 'propaldet',   0, 0, '', '', 1, '', 0, 0, '', '', 'priceindexation@priceindexation', '$conf->priceindexation->enabled');
-		$result2=$extrafields->addExtraField('index0', "Initial_index", 'decimal', 101,  '24,8', 'propaldet',   0, 0, '', '', 1, '', 0, 0, '', '', 'priceindexation@priceindexation', '$conf->priceindexation->enabled');
-		$result3=$extrafields->addExtraField('index1', "Current_index", 'decimal', 102,  '24,8', 'propaldet',   0, 0, '', '', 1, '', 0, 0, '', '', 'priceindexation@priceindexation', '$conf->priceindexation->enabled');
+		$result1=$extrafields->addExtraField('price0', "Initial_UP", 'price', 100,  '', 'propaldet',   0, 0, '', '', 1, '', '1', 0, '', '', 'priceindexation@priceindexation', '$conf->priceindexation->enabled');
+		$result2=$extrafields->addExtraField('index0', "Initial_index", 'double', 101,  '24,8', 'propaldet',   0, 0, '', '', 1, '', '1', 0, '', '', 'priceindexation@priceindexation', '$conf->priceindexation->enabled');
+		$result3=$extrafields->addExtraField('index1', "Current_index", 'double', 102,  '24,8', 'propaldet',   0, 0, '', '', 1, '', '1', 0, '', '', 'priceindexation@priceindexation', '$conf->priceindexation->enabled');
 /*
-		$result1=$extrafields->addExtraField('price0', "Initial_UP", 'price', 100,  '', 'commandedet',   0, 0, '', '', 1, '', 0, 0, '', '', 'priceindexation@priceindexation', '$conf->priceindexation->enabled');
-		$result2=$extrafields->addExtraField('index0', "Initial_index", 'decimal', 101,  '24,8', 'commandedet',   0, 0, '', '', 1, '', 0, 0, '', '', 'priceindexation@priceindexation', '$conf->priceindexation->enabled');
-		$result3=$extrafields->addExtraField('index1', "Current_index", 'decimal', 102,  '24,8', 'commandedet',   0, 0, '', '', 1, '', 0, 0, '', '', 'priceindexation@priceindexation', '$conf->priceindexation->enabled');
+		$result1=$extrafields->addExtraField('price0', "Initial_UP", 'price', 100,  '', 'commandedet',   0, 0, '', '', 1, '', '1', 0, '', '', 'priceindexation@priceindexation', '$conf->priceindexation->enabled');
+		$result2=$extrafields->addExtraField('index0', "Initial_index", 'double', 101,  '24,8', 'commandedet',   0, 0, '', '', 1, '', '1', 0, '', '', 'priceindexation@priceindexation', '$conf->priceindexation->enabled');
+		$result3=$extrafields->addExtraField('index1', "Current_index", 'double', 102,  '24,8', 'commandedet',   0, 0, '', '', 1, '', '1', 0, '', '', 'priceindexation@priceindexation', '$conf->priceindexation->enabled');
 */
-		$result1=$extrafields->addExtraField('price0', "Initial_UP", 'price', 100,  '', 'facturedet',   0, 0, '', '', 1, '', 0, 0, '', '', 'priceindexation@priceindexation', '$conf->priceindexation->enabled');
-		$result2=$extrafields->addExtraField('index0', "Initial_index", 'decimal', 101,  '24,8', 'facturedet',   0, 0, '', '', 1, '', 0, 0, '', '', 'priceindexation@priceindexation', '$conf->priceindexation->enabled');
-		$result3=$extrafields->addExtraField('index1', "Current_index", 'decimal', 102,  '24,8', 'facturedet',   0, 0, '', '', 1, '', 0, 0, '', '', 'priceindexation@priceindexation', '$conf->priceindexation->enabled');
+		$result1=$extrafields->addExtraField('price0', "Initial_UP", 'price', 100,  '', 'facturedet',   0, 0, '', '', 1, '', '1', 0, '', '', 'priceindexation@priceindexation', '$conf->priceindexation->enabled');
+		$result2=$extrafields->addExtraField('index0', "Initial_index", 'double', 101,  '24,8', 'facturedet',   0, 0, '', '', 1, '', '1', 0, '', '', 'priceindexation@priceindexation', '$conf->priceindexation->enabled');
+		$result3=$extrafields->addExtraField('index1', "Current_index", 'double', 102,  '24,8', 'facturedet',   0, 0, '', '', 1, '', '1', 0, '', '', 'priceindexation@priceindexation', '$conf->priceindexation->enabled');
 
 		//$result2=$extrafields->addExtraField('myattr2', "New Attr 2 label", 'varchar', 1, 10, 'project',      0, 0, '', '', 1, '', 0, 0, '', '', 'squelette@squelette', '$conf->squelette->enabled');
 		//$result3=$extrafields->addExtraField('myattr3', "New Attr 3 label", 'varchar', 1, 10, 'bank_account', 0, 0, '', '', 1, '', 0, 0, '', '', 'squelette@squelette', '$conf->squelette->enabled');
